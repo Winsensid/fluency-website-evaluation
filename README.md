@@ -20,8 +20,8 @@ Clone the repository:
 Open your terminal (or Git Bash) and run:
 bash
 Copy
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/Winsensid/WebHealthCheck.git
+cd to repo
 Install dependencies:
 
 Maven will automatically download all necessary dependencies for Selenium and TestNG when you build the project. Run the following command to install them:
