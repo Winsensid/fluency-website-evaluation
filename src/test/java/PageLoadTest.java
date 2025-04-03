@@ -1,34 +1,42 @@
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class PageLoadTest {
+
+    WebDriver driver;
+
+    @BeforeTest
+    public void setUp() {
+        // Set up the WebDriver
+        driver = new FirefoxDriver();
+    }
+
     @Test
-    public void pageLoadTimeTest() {
-        // Set up the ChromeDriver (make sure the path is correct)
+    public void measurePageLoadTime() {
+        // Start page load time tracking
+        long startTime = System.currentTimeMillis();
 
-        WebDriver driver = new FirefoxDriver();
-        long startTime = System.nanoTime(); // Record start time
+        // Navigate to the Fluency website
+        driver.get("https://www.fluency.inc");
 
-        try {
-            driver.get("https://www.passes.com");
+        // Calculate page load time
+        long endTime = System.currentTimeMillis();
+        long loadTime = endTime - startTime;
+        System.out.println("Page load time: " + loadTime + " milliseconds");
 
-            // Wait until the page loads completely (simple way, better to use explicit waits in real cases)
-            while (true) {
-                if (driver.getTitle() != null && !driver.getTitle().isEmpty()) {
-                    break; // Page has loaded
-                }
-            }
+        // Assert that the page load time is within a reasonable limit (e.g., 5 seconds)
+        Assert.assertTrue(loadTime < 5000, "Page load time exceeds 5 seconds!");
+    }
 
-            long endTime = System.nanoTime(); // Record end time
-            long duration = (endTime - startTime) / 1000000; // Convert to milliseconds
-            System.out.println("Page load time: " + duration + " ms");
-
-        } catch (Exception e) {
-            System.out.println("Error while loading the page: " + e.getMessage());
-        } finally {
-            driver.quit();
-        }
+    @AfterTest
+    public void tearDown() {
+        // Closing the driver
+        driver.quit();
     }
 }

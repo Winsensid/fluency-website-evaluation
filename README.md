@@ -1,49 +1,46 @@
-Website Health and SEO Tests
-This repository contains automated tests to help improve the health and SEO of the Passes website. The tests include checks for broken links, page load performance, and SEO-related elements like page titles and meta descriptions. It uses Selenium WebDriver for browser automation, TestNG for running the tests, and Java as the programming language.
+Fluency Website Evaluation
+This repository contains a testing framework to evaluate the Fluency website. The framework includes automated checks for link functionality, page load performance, and general website information. It was built using Selenium and TestNG.
 
-Tools & Technologies Used
-Selenium WebDriver (version 4.27.0) - For web automation and interacting with web pages.
-TestNG (version 7.5) - For structuring and running tests.
-Java (version 21.0.1) - The programming language used to write the tests.
-Maven - For project management and dependency management.
-How to Set Up and Run the Tests
-Prerequisites
-Make sure you have the following installed on your system:
+Features
+Link Verification: Checks that all links on the website return a valid HTTP status code.
 
-Java (version 21.0.1 or compatible)
-Maven (for managing dependencies and building the project)
-IDE like IntelliJ IDEA or Eclipse (optional, but helpful)
-Selenium WebDriver and TestNG dependencies are managed using Maven, so once you have Maven set up, it will automatically download the required dependencies.
-Steps to Set Up
+Page Load Performance: Measures the page load time to ensure the site loads within acceptable performance standards.
+
+Website Information: Gathers basic information about the website, including the number of links and page title.
+
+Requirements
+Java 11 or higher
+
+Selenium WebDriver
+
+TestNG
+
+ChromeDriver or another WebDriver of your choice
+
+Setup
 Clone the repository:
 
-Open your terminal (or Git Bash) and run:
 bash
 Copy
-git clone https://github.com/Winsensid/WebHealthCheck.git
-cd to repo
-Install dependencies:
+Edit
+git clone https://github.com/Winsensid/fluency-website-evaluation.git
+Install required dependencies
 
-Maven will automatically download all necessary dependencies for Selenium and TestNG when you build the project. Run the following command to install them:
 bash
 Copy
+Edit
 mvn install
-Run the tests:
+Run the tests using your preferred IDE or from the command line with TestNG:
 
-To run all the tests in the project, use the following command:
 bash
 Copy
+Edit
 mvn test
-This will execute all the tests specified in the test classes and show the results in the terminal or your IDE.
+Tests
+Link Verification: Validates if all links are working.
 
-Test Classes
-BrokenLinkTest: This test class checks for any broken links on the Passes website.
-PageLoadTest: This test measures the time it takes for pages to load and provides performance insights.
-SEOTests: This test validates key SEO elements like page titles, meta descriptions, and Open Graph tags.
-Test Results
-After running the tests, the results will be displayed in the terminal or output window in your IDE.
-If any broken links are found, they will be listed.
-For page load tests, you'll see the time taken to load pages.
-The SEO test will check for missing or incorrect meta descriptions and page titles.
-License
-This project is licensed under the MIT License.
+Page Load Performance: Ensures the page loads quickly (within the acceptable limit).
+
+Website Information: Prints the number of links and the title of the page.
+
+
