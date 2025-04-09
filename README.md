@@ -11,7 +11,7 @@ Website Information: Gathers basic information about the website, including the 
 Requirements
 Java 11 or higher
 
-Selenium WebDriver
+Selenium  WebDriver
 
 TestNG
 
