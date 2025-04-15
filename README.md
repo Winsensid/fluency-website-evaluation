@@ -26,7 +26,7 @@ Edit
 git clone https://github.com/Winsensid/fluency-website-evaluation.git
 Install required dependencies
 
-bash
+bash 
 Copy
 Edit
 mvn install
