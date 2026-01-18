@@ -6,7 +6,7 @@ Link Verification: Checks that all links on the website return a valid HTTP stat
 
 Page Load Performance: Measures the page load time to ensure the site loads within acceptable performance standards.
 
-Website Information: Gathers basic information about the website, including the number of links and page title.
+Website Information: Gathers basic information about the website, including the number of links and page title. 
 
 Requirements
 Java 11 or higher
