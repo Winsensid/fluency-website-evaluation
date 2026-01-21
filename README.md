@@ -1,5 +1,5 @@
 Website Evaluation
-This repository contains a testing framework to evaluate the Fluency website. The framework includes automated checks for link functionality, page load performance, and general website information. It was built using Selenium and Java.
+This repository contains  a testing framework to evaluate the Fluency website. The framework includes automated checks for link functionality, page load performance, and general website information. It was built using Selenium and Java.
 
 Features
 Link Verification: Checks that all links on the website return a valid HTTP status code.
