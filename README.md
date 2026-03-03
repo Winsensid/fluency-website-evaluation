@@ -15,7 +15,7 @@ Selenium  WebDriver
 
 TestNG
 
-FireFoxDriver or another WebDriver of your choice
+FireFoxDriver or another WebDriver of your choice 
 
 Setup
 Clone the repository:
